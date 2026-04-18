@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мій сайт — Вікі</title>  <!-- ✏️ -->
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Стилі тільки для вікі-сторінки */
+
+    /* Таблиця інформації (як у Вікіпедії) */
+    .info-table { width:100%; border-collapse:collapse; font-size:.9rem; }
+    .info-table th {
+      background: var(--темний); color:#fff;
+      padding:.6rem 1rem; text-align:center;
+    }
+    .info-table td { padding:.5rem 1rem; border-top:1px solid #eee; }
+    .info-table tr td:first-child { font-weight:600; color:var(--сірий); width:45%; }
+    .info-table tr:nth-child(even) td { background:#f9f9f9; }
+
+    /* Текст статті */
+    article h2 { font-size:1.3rem; border-top:2px solid #eee; padding-top:1.5rem; margin:2rem 0 .75rem; }
+    article h3 { font-size:1.1rem; margin:1.5rem 0 .5rem; }
+    article p  { margin-bottom:1rem; color:var(--текст); }
+    article ul, article ol { padding-left:1.5rem; margin-bottom:1rem; }
+    article li { margin-bottom:.4rem; }
+    article blockquote {
+      border-left:4px solid var(--акцент);
+      background:#fff;
+      padding:1rem 1.25rem;
+      margin:1.25rem 0;
+      border-radius:0 8px 8px 0;
+      font-style:italic;
+      color:var(--сірий);
+    }
+
+    /* Зміст */
+    .toc { background:#fff; border:1.5px solid #eee; border-radius:10px; padding:1.1rem; margin-bottom:1.75rem; font-size:.9rem; }
+    .toc strong { display:block; margin-bottom:.5rem; }
+    .toc ol { padding-left:1.2rem; margin:0; }
+    .toc li { margin-bottom:.25rem; }
+    .toc a { color:var(--текст); }
+    .toc a:hover { color:var(--акцент); }
+  </style>
+</head>
+<body>
+
+
+<!-- НАВІГАЦІЯ -->
+<nav>
+  <a href="index.html" class="logo">Моє<span>Лого</span></a>
+  <ul>
+    <li><a href="index.html">Головна</a></li>
+    <li><a href="shop.html">Магазин</a></li>
+    <li><a href="wiki.html" class="active">Вікі</a></li>
+    <li><a href="series.html">Серіал</a></li>
+  </ul>
+</nav>
+
+
+<!-- ╔══════════════════════════════════╗
+     ║  БЛОК 1: ЗАГОЛОВОК СТАТТІ      ║
+     ║  ✏️ Змінити: назву, теги, дату  ║
+     ╚══════════════════════════════════╝ -->
+<section style="background: var(--темний); color:#fff; padding:3rem 2rem; text-align:center;">
+  <p class="badge badge-red" style="margin-bottom:.75rem;">Наука</p>  <!-- ✏️ категорія -->
+  <h1 style="color:#fff; font-size:clamp(1.5rem,4vw,2.5rem); margin-bottom:.5rem;">Назва статті</h1>  <!-- ✏️ -->
+  <p style="opacity:.55; font-size:.85rem;">Оновлено: 15 квітня 2025</p>  <!-- ✏️ -->
+</section>
+
+
+<!-- ╔══════════════════════════════════╗
+     ║  БЛОК 2: СТАТТЯ + БОКОВА ПАНЕЛЬ ║
+     ║  ✏️ Замінити весь текст         ║
+     ╚══════════════════════════════════╝ -->
+<section style="padding: 3rem 2rem;">
+  <div class="grid-2" style="max-width:1050px; margin:0 auto; align-items:start; gap:2.5rem;">
+
+
+    <!-- ══ ЛІВА ЧАСТИНА: стаття ══ -->
+    <article>
+
+      <!-- Зміст (видали якщо непотрібно) -->
+      <div class="toc">
+        <strong>📋 Зміст</strong>
+        <ol>
+          <!-- ✏️ Змінити пункти (href="#id" = id заголовку нижче) -->
+          <li><a href="#вступ">Вступ</a></li>
+          <li><a href="#історія">Історія</a></li>
+          <li><a href="#факти">Цікаві факти</a></li>
+          <li><a href="#джерела">Джерела</a></li>
+        </ol>
+      </div>
+
+      <!-- ── Розділ 1: Вступ ── -->
+      <section id="вступ">
+        <!-- ✏️ Перший параграф (найважливіший — пояснює про що стаття) -->
+        <p><strong>Назва статті</strong> — це ... (вступний абзац. Напиши 2-3 речення що пояснять тему).</p>
+        <p>Другий абзац. Додатковий контекст або важливі факти.</p>
+
+        <!-- Фото (замінити .placeholder на <img src="..." alt="...">) -->
+        <figure style="margin:1.5rem 0; text-align:center;">
+          <div class="placeholder" style="height:260px; border-radius:10px; margin-bottom:.5rem;">📷 Головне фото</div>
+          <figcaption style="font-size:.8rem; color:var(--сірий); font-style:italic;">Підпис до фото.</figcaption>  <!-- ✏️ -->
+        </figure>
+      </section>
+
+      <!-- ── Розділ 2: Історія ── -->
+      <section id="історія">
+        <h2>Історія</h2>  <!-- ✏️ назва розділу -->
+        <p>Напиши тут про походження або історію теми.</p>  <!-- ✏️ -->
+        <p>Продовження. Як розвивалась тема? Які були ключові події?</p>  <!-- ✏️ -->
+
+        <!-- Цитата (видали якщо непотрібно) -->
+        <blockquote>
+          «Відома цитата пов'язана з темою.»  <!-- ✏️ -->
+          <br><em>— Автор цитати</em>  <!-- ✏️ -->
+        </blockquote>
+      </section>
+
+      <!-- ── Розділ 3: Факти ── -->
+      <section id="факти">
+        <h2>Цікаві факти</h2>
+        <ol>
+          <!-- ✏️ Дублюй <li> для нових фактів -->
+          <li>Перший цікавий факт.</li>
+          <li>Другий цікавий факт з числом або датою.</li>
+          <li>Третій факт.</li>
+        </ol>
+      </section>
+
+      <!-- ── Розділ 4: Джерела ── -->
+      <section id="джерела">
+        <h2>Джерела</h2>
+        <ol style="font-size:.9rem;">
+          <!-- ✏️ Дублюй <li> для нових джерел -->
+          <li><a href="#" target="_blank">Назва книги або сайту. Рік.</a></li>
+          <li><a href="#" target="_blank">Друге джерело.</a></li>
+        </ol>
+      </section>
+
+    </article>
+    <!-- ══ кінець статті ══ -->
+
+
+    <!-- ══ ПРАВА ЧАСТИНА: бокова панель ══ -->
+    <aside>
+
+      <!-- ─ Інформаційна таблиця ─ -->
+      <div class="card" style="margin-bottom:1.25rem;">
+        <div class="placeholder" style="height:180px;">📷 Фото об'єкту</div>  <!-- ✏️ -->
+        <div class="card-body">
+          <table class="info-table">
+            <thead><tr><th colspan="2">Назва об'єкту</th></tr></thead>  <!-- ✏️ -->
+            <tbody>
+              <!-- ✏️ Дублюй <tr> для нових рядків -->
+              <tr><td>Рік</td><td>2020</td></tr>
+              <tr><td>Країна</td><td>Україна</td></tr>
+              <tr><td>Статус</td><td>Активний</td></tr>
+              <tr><td>Сайт</td><td><a href="#">example.com</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- ─ Теги ─ (видали якщо непотрібно) -->
+      <div class="card">
+        <div class="card-body">
+          <strong style="font-size:.9rem; display:block; margin-bottom:.75rem;">Теги</strong>
+          <div style="display:flex; flex-wrap:wrap; gap:.4rem;">
+            <!-- ✏️ Дублюй <a> для нових тегів -->
+            <a href="#" class="badge badge-red" style="text-decoration:none;">тег 1</a>
+            <a href="#" class="badge badge-gray" style="text-decoration:none;">тег 2</a>
+            <a href="#" class="badge badge-yellow" style="text-decoration:none;">тег 3</a>
+          </div>
+        </div>
+      </div>
+
+    </aside>
+    <!-- ══ кінець бокової панелі ══ -->
+
+  </div>
+</section>
+
+
+<!-- ПІДВАЛ -->
+<footer>
+  <ul>
+    <li><a href="index.html">Головна</a></li>
+    <li><a href="shop.html">Магазин</a></li>
+    <li><a href="wiki.html">Вікі</a></li>
+    <li><a href="series.html">Серіал</a></li>
+  </ul>
+  <p>&copy; 2025 МоєЛого</p>
+</footer>
+
+</body>
+</html>

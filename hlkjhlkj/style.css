@@ -1,0 +1,129 @@
+/* ================================================
+   style.css — головний файл стилів
+   Щоб змінити кольори — змінюй значення нижче!
+   ================================================ */
+
+/* ── 🎨 КОЛЬОРИ (змінюй тут!) ─────────────────── */
+:root {
+  --темний:  #1a1a2e;  /* шапка і підвал          */
+  --акцент:  #e94560;  /* кнопки, лінії, посилання */
+  --фон:     #f7f4ef;  /* фон сторінки             */
+  --картка:  #ffffff;  /* фон карток               */
+  --текст:   #2d2d2d;  /* основний текст           */
+  --сірий:   #888888;  /* другорядний текст        */
+}
+
+/* ── ШРИФТИ ──────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@700&family=Manrope:wght@400;600&display=swap');
+
+body {
+  font-family: 'Manrope', sans-serif;
+  background: var(--фон);
+  color: var(--текст);
+  margin: 0;
+  line-height: 1.65;
+}
+h1, h2, h3 { font-family: 'Unbounded', sans-serif; line-height: 1.2; }
+img { max-width: 100%; display: block; }
+a   { color: var(--акцент); }
+
+/* ── НАВІГАЦІЯ ───────────────────────────────── */
+nav {
+  background: var(--темний);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+nav .logo {
+  font-family: 'Unbounded', sans-serif;
+  color: #fff;
+  font-size: 1.2rem;
+  text-decoration: none;
+  padding: 1rem 0;
+}
+nav .logo span { color: var(--акцент); }
+nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: .25rem; }
+nav a {
+  color: rgba(255,255,255,.75);
+  text-decoration: none;
+  padding: .5rem .9rem;
+  border-radius: 6px;
+  font-size: .9rem;
+  transition: background .2s;
+}
+nav a:hover, nav a.active { background: var(--акцент); color: #fff; }
+
+/* ── КНОПКИ ──────────────────────────────────── */
+.btn {
+  display: inline-block;
+  padding: .65rem 1.5rem;
+  border-radius: 8px;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  font-size: .9rem;
+  text-decoration: none;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: .2s;
+}
+.btn-red    { background: var(--акцент); color: #fff; }
+.btn-red:hover { background: #c5304a; }
+.btn-border { border-color: var(--акцент); color: var(--акцент); background: none; }
+.btn-border:hover { background: var(--акцент); color: #fff; }
+.btn-dark   { background: var(--темний); color: #fff; }
+.btn-dark:hover { background: #2a2a4e; }
+
+/* ── КАРТКА ──────────────────────────────────── */
+.card {
+  background: var(--картка);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 3px 16px rgba(0,0,0,.09);
+  transition: transform .2s;
+}
+.card:hover { transform: translateY(-4px); }
+.card-body  { padding: 1.1rem; }
+
+/* ── СІТКИ ───────────────────────────────────── */
+.grid-3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.25rem; }
+.grid-4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.25rem; }
+.grid-2 { display: grid; grid-template-columns: repeat(2,1fr); gap: 2rem; }
+@media(max-width:700px) {
+  .grid-3, .grid-4 { grid-template-columns: repeat(2,1fr); }
+  .grid-2 { grid-template-columns: 1fr; }
+}
+@media(max-width:480px) {
+  .grid-3, .grid-4 { grid-template-columns: 1fr; }
+}
+
+/* ── ПІДВАЛ ──────────────────────────────────── */
+footer {
+  background: var(--темний);
+  color: rgba(255,255,255,.65);
+  text-align: center;
+  padding: 2rem;
+  font-size: .85rem;
+}
+footer a { color: var(--акцент); text-decoration: none; }
+footer ul { list-style:none; padding:0; margin:0 0 .75rem; display:flex; justify-content:center; flex-wrap:wrap; gap:1rem; }
+
+/* ── ФОТО-ЗАГЛУШКА (замінити на <img src="...">) */
+.placeholder {
+  background: linear-gradient(135deg, #ddd, #ccc);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-size: .85rem;
+  min-height: 180px;
+}
+
+/* ── БЕЙДЖ (маленька кольорова мітка) ────────── */
+.badge { display:inline-block; padding:.2rem .7rem; border-radius:99px; font-size:.75rem; font-weight:700; text-transform:uppercase; }
+.badge-red    { background: var(--акцент); color:#fff; }
+.badge-yellow { background: #f5a623; color:#1a1a2e; }
+.badge-gray   { border:1.5px solid #ddd; color:var(--сірий); }

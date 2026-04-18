@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мій сайт — Серіал</title>  <!-- ✏️ -->
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Стилі тільки для сторінки серіалу */
+
+    /* Hero з темним градієнтом поверх фону */
+    .series-hero {
+      min-height: 480px;
+      display: flex;
+      align-items: flex-end;
+      padding: 3rem 2rem;
+      /* ✏️ Заміни нижній рядок на: background-image: url('постер.jpg'); */
+      background: linear-gradient(to top, #0a0a0a 0%, rgba(10,10,10,.4) 60%, transparent 100%),
+                  linear-gradient(135deg, #0f0c29, #24243e);
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* Картка актора */
+    .actor-card { text-align:center; }
+    .actor-card .actor-photo { height:180px; width:100%; object-fit:cover; }
+    .actor-card p { margin:.5rem 0 0; font-size:.9rem; font-weight:600; }
+    .actor-card span { font-size:.8rem; color:var(--сірий); }
+
+    /* Рядок епізоду */
+    .episode {
+      background: #fff;
+      border-radius:10px;
+      padding:1rem 1.25rem;
+      display:flex;
+      gap:1rem;
+      align-items:center;
+      box-shadow:0 2px 10px rgba(0,0,0,.06);
+    }
+    .ep-num {
+      font-family:'Unbounded',sans-serif;
+      font-size:1.5rem;
+      color:var(--акцент);
+      min-width:2rem;
+    }
+  </style>
+</head>
+<body>
+
+
+<!-- НАВІГАЦІЯ -->
+<nav>
+  <a href="index.html" class="logo">Моє<span>Лого</span></a>
+  <ul>
+    <li><a href="index.html">Головна</a></li>
+    <li><a href="shop.html">Магазин</a></li>
+    <li><a href="wiki.html">Вікі</a></li>
+    <li><a href="series.html" class="active">Серіал</a></li>
+  </ul>
+</nav>
+
+
+<!-- ╔══════════════════════════════════╗
+     ║  БЛОК 1: ПОСТЕР СЕРІАЛУ        ║
+     ║  ✏️ Змінити: назву, жанри,     ║
+     ║     опис, .series-hero фон     ║
+     ╚══════════════════════════════════╝ -->
+<div class="series-hero">
+  <div style="color:#fff; max-width:600px;">
+
+    <!-- Жанри (дублюй <span> для нових) -->
+    <div style="display:flex; gap:.5rem; margin-bottom:1rem; flex-wrap:wrap;">
+      <span class="badge badge-red">Фантастика</span>  <!-- ✏️ -->
+      <span class="badge badge-gray" style="color:#fff; border-color:rgba(255,255,255,.3);">2022–2025</span>  <!-- ✏️ -->
+    </div>
+
+    <h1 style="color:#fff; font-size:clamp(2rem,6vw,4rem); margin-bottom:.75rem;">
+      Назва Серіалу  <!-- ✏️ -->
+    </h1>
+
+    <!-- Мета-інфо -->
+    <p style="opacity:.75; font-size:.9rem; margin-bottom:1rem;">
+      ⭐ 8.7 &nbsp;|&nbsp; 4 сезони &nbsp;|&nbsp; 32 епізоди &nbsp;|&nbsp; 45 хв / серія  <!-- ✏️ -->
+    </p>
+
+    <p style="opacity:.8; margin-bottom:1.75rem; font-size:.95rem;">
+      Короткий синопсис серіалу. Про що він? Хто головний герой? 2-3 речення.  <!-- ✏️ -->
+    </p>
+
+    <a href="#епізоди" class="btn btn-red">▶ Епізоди</a>  <!-- ✏️ -->
+    &nbsp;
+    <a href="#акторі" class="btn btn-border" style="color:#fff; border-color:rgba(255,255,255,.4);">👥 Актори</a>
+
+  </div>
+</div>
+
+
+<!-- ╔══════════════════════════════════╗
+     ║  БЛОК 2: ЗАГАЛЬНА ІНФОРМАЦІЯ   ║
+     ║  ✏️ Змінити числа та підписи   ║
+     ║  ➕ Дублюй <div> для нових     ║
+     ╚══════════════════════════════════╝ -->
+<section style="background: var(--темний); padding: 1.5rem 2rem;">
+  <div style="display:flex; justify-content:center; flex-wrap:wrap; gap:0; max-width:700px; margin:0 auto;">
+
+    <!-- ── Плашка (скопіюй для нової) ── -->
+    <div style="text-align:center; padding:1rem 2rem; border-right:1px solid rgba(255,255,255,.1); color:#fff;">
+      <strong style="display:block; font-size:1.8rem; color:var(--акцент);">4</strong>
+      <span style="font-size:.8rem; opacity:.6;">Сезони</span>  <!-- ✏️ -->
+    </div>
+
+    <div style="text-align:center; padding:1rem 2rem; border-right:1px solid rgba(255,255,255,.1); color:#fff;">
+      <strong style="display:block; font-size:1.8rem; color:var(--акцент);">32</strong>
+      <span style="font-size:.8rem; opacity:.6;">Епізоди</span>  <!-- ✏️ -->
+    </div>
+
+    <div style="text-align:center; padding:1rem 2rem; border-right:1px solid rgba(255,255,255,.1); color:#fff;">
+      <strong style="display:block; font-size:1.8rem; color:#f5a623;">⭐ 8.7</strong>
+      <span style="font-size:.8rem; opacity:.6;">IMDb</span>  <!-- ✏️ -->
+    </div>
+
+    <div style="text-align:center; padding:1rem 2rem; color:#fff;">
+      <strong style="display:block; font-size:1.8rem; color:var(--акцент);">2022</strong>
+      <span style="font-size:.8rem; opacity:.6;">Рік виходу</span>  <!-- ✏️ -->
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ╔══════════════════════════════════╗
+     ║  БЛОК 3: АКТОРИ / ПЕРСОНАЖІ    ║
+     ║  ✏️ Замінити фото, імена, ролі  ║
+     ║  ➕ Дублюй <li> для нових       ║
+     ╚══════════════════════════════════╝ -->
+<section id="актори" style="padding: 3.5rem 2rem;">
+
+  <h2 style="text-align:center; font-size:1.4rem; margin-bottom:2rem;">Актори</h2>  <!-- ✏️ -->
+
+  <ul class="grid-4" style="list-style:none; padding:0; margin:0;">
+
+    <!-- ── Актор (скопіюй <li> для нового) ── -->
+    <li class="card actor-card">
+      <!-- Фото (заміни .placeholder на <img src="актор.jpg" alt="ім'я">) -->
+      <div class="placeholder actor-photo">📷</div>
+      <div class="card-body">
+        <p>Ім'я Актора</p>  <!-- ✏️ -->
+        <span>Персонаж</span>  <!-- ✏️ -->
+      </div>
+    </li>
+
+    <li class="card actor-card">
+      <div class="placeholder actor-photo">📷</div>
+      <div class="card-body"><p>Ім'я Актора</p><span>Персонаж</span></div>
+    </li>
+
+    <li class="card actor-card">
+      <div class="placeholder actor-photo">📷</div>
+      <div class="card-body"><p>Ім'я Актора</p><span>Персонаж</span></div>
+    </li>
+
+    <li class="card actor-card">
+      <div class="placeholder actor-photo">📷</div>
+      <div class="card-body"><p>Ім'я Актора</p><span>Персонаж</span></div>
+    </li>
+
+  </ul>
+</section>
+
+
+<!-- ╔══════════════════════════════════╗
+     ║  БЛОК 4: ГАЛЕРЕЯ ФОТО          ║
+     ║  ✏️ Замінити .placeholder на   ║
+     ║     <img src="кадр.jpg">       ║
+     ║  ➕ Дублюй <li> для нових фото  ║
+     ╚══════════════════════════════════╝ -->
+<section style="padding: 0 2rem 3.5rem;">
+
+  <h2 style="text-align:center; font-size:1.4rem; margin-bottom:2rem;">Галерея</h2>  <!-- ✏️ -->
+
+  <ul class="grid-3" style="list-style:none; padding:0; margin:0;">
+    <!-- ── Фото (скопіюй <li> для нового) ── -->
+    <li style="border-radius:10px; overflow:hidden;">
+      <div class="placeholder" style="height:200px;">📷 Кадр 1</div>
+    </li>
+    <li style="border-radius:10px; overflow:hidden;">
+      <div class="placeholder" style="height:200px;">📷 Кадр 2</div>
+    </li>
+    <li style="border-radius:10px; overflow:hidden;">
+      <div class="placeholder" style="height:200px;">📷 Кадр 3</div>
+    </li>
+    <li style="border-radius:10px; overflow:hidden;">
+      <div class="placeholder" style="height:200px;">📷 Кадр 4</div>
+    </li>
+    <li style="border-radius:10px; overflow:hidden;">
+      <div class="placeholder" style="height:200px;">📷 Кадр 5</div>
+    </li>
+    <li style="border-radius:10px; overflow:hidden;">
+      <div class="placeholder" style="height:200px;">📷 Кадр 6</div>
+    </li>
+  </ul>
+
+</section>
+
+
+<!-- ╔══════════════════════════════════╗
+     ║  БЛОК 5: СПИСОК ЕПІЗОДІВ       ║
+     ║  ✏️ Змінити номери, назви      ║
+     ║  ➕ Дублюй .episode для нових   ║
+     ╚══════════════════════════════════╝ -->
+<section id="епізоди" style="padding: 0 2rem 4rem; background: var(--фон);">
+
+  <h2 style="text-align:center; font-size:1.4rem; margin-bottom:2rem;">Епізоди — Сезон 1</h2>  <!-- ✏️ -->
+
+  <ul style="list-style:none; padding:0; margin:0 auto; max-width:750px; display:flex; flex-direction:column; gap:.75rem;">
+
+    <!-- ── Епізод (скопіюй <li> для нового) ── -->
+    <li class="episode">
+      <span class="ep-num">01</span>  <!-- ✏️ номер -->
+      <!-- Фото (необов'язково, видали якщо непотрібно) -->
+      <div class="placeholder" style="width:90px; height:55px; border-radius:6px; flex-shrink:0; min-height:unset;">📷</div>
+      <div>
+        <strong style="font-size:.95rem;">Назва епізоду</strong>  <!-- ✏️ -->
+        <p style="margin:.25rem 0 0; font-size:.85rem; color:var(--сірий);">Короткий опис без спойлерів. 1-2 речення.</p>  <!-- ✏️ -->
+      </div>
+      <span style="margin-left:auto; font-size:.8rem; color:var(--сірий); white-space:nowrap;">45 хв</span>  <!-- ✏️ -->
+    </li>
+
+    <li class="episode">
+      <span class="ep-num">02</span>
+      <div class="placeholder" style="width:90px; height:55px; border-radius:6px; flex-shrink:0; min-height:unset;">📷</div>
+      <div>
+        <strong style="font-size:.95rem;">Назва епізоду</strong>
+        <p style="margin:.25rem 0 0; font-size:.85rem; color:var(--сірий);">Короткий опис без спойлерів.</p>
+      </div>
+      <span style="margin-left:auto; font-size:.8rem; color:var(--сірий); white-space:nowrap;">42 хв</span>
+    </li>
+
+    <li class="episode">
+      <span class="ep-num">03</span>
+      <div class="placeholder" style="width:90px; height:55px; border-radius:6px; flex-shrink:0; min-height:unset;">📷</div>
+      <div>
+        <strong style="font-size:.95rem;">Назва епізоду</strong>
+        <p style="margin:.25rem 0 0; font-size:.85rem; color:var(--сірий);">Короткий опис без спойлерів.</p>
+      </div>
+      <span style="margin-left:auto; font-size:.8rem; color:var(--сірий); white-space:nowrap;">50 хв</span>
+    </li>
+
+  </ul>
+</section>
+
+
+<!-- ПІДВАЛ -->
+<footer>
+  <ul>
+    <li><a href="index.html">Головна</a></li>
+    <li><a href="shop.html">Магазин</a></li>
+    <li><a href="wiki.html">Вікі</a></li>
+    <li><a href="series.html">Серіал</a></li>
+  </ul>
+  <p>&copy; 2025 МоєЛого</p>
+</footer>
+
+
+</body>
+</html>

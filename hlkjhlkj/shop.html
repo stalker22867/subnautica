@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мій сайт — Магазин</title>  <!-- ✏️ -->
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Стилі тільки для сторінки магазину */
+    .price       { color: var(--акцент); font-weight:700; font-size:1.1rem; }
+    .price-old   { text-decoration:line-through; color:var(--сірий); font-size:.85rem; margin-right:.3rem; }
+    .stars       { color:#f5a623; font-size:.85rem; }
+  </style>
+</head>
+<body>
+
+
+<!-- НАВІГАЦІЯ (однакова на всіх сторінках) -->
+<nav>
+  <a href="index.html" class="logo">Моє<span>Лого</span></a>
+  <ul>
+    <li><a href="index.html">Головна</a></li>
+    <li><a href="shop.html" class="active">Магазин</a></li>
+    <li><a href="wiki.html">Вікі</a></li>
+    <li><a href="series.html">Серіал</a></li>
+  </ul>
+</nav>
+
+
+<!-- ╔══════════════════════════════════╗
+     ║  БЛОК 1: ЗАГОЛОВОК СТОРІНКИ    ║
+     ║  ✏️ Змінити: текст, колір фону  ║
+     ╚══════════════════════════════════╝ -->
+<section style="background: var(--темний); color:#fff; padding:3rem 2rem; text-align:center;">
+  <h1 style="color:#fff; font-size:1.8rem; margin-bottom:.5rem;">Наш Магазин</h1>  <!-- ✏️ -->
+  <p style="opacity:.65;">Знайди все що тобі потрібно</p>  <!-- ✏️ -->
+</section>
+
+
+<!-- ╔══════════════════════════════════╗
+     ║  БЛОК 2: ФІЛЬТРИ (кнопки)      ║
+     ║  ✏️ Змінити: назви категорій   ║
+     ║  ➕ Дублювати: скопіюй <button> ║
+     ╚══════════════════════════════════╝ -->
+<section style="padding: 1.5rem 2rem; background:#fff; border-bottom:1px solid #eee;">
+  <p style="color:var(--сірий); margin:0 0 .75rem; font-size:.9rem;">Оберіть категорію:</p>
+  <div style="display:flex; gap:.5rem; flex-wrap:wrap;">
+
+    <!-- ── Скопіюй <button> для нової категорії ── -->
+    <button class="btn btn-dark"   onclick="filterActive(this)">Всі</button>         <!-- ✏️ -->
+    <button class="btn btn-border" onclick="filterActive(this)">Категорія 1</button>  <!-- ✏️ -->
+    <button class="btn btn-border" onclick="filterActive(this)">Категорія 2</button>  <!-- ✏️ -->
+    <button class="btn btn-border" onclick="filterActive(this)">Категорія 3</button>  <!-- ✏️ -->
+
+  </div>
+</section>
+
+
+<!-- ╔══════════════════════════════════╗
+     ║  БЛОК 3: СІТКА ТОВАРІВ         ║
+     ║  ✏️ Замінити: фото, назви, ціни ║
+     ║  ➕ Дублювати: скопіюй <li>     ║
+     ║  ➖ Видалити: видали <li>        ║
+     ╚══════════════════════════════════╝ -->
+<section style="padding: 3rem 2rem;">
+
+  <ul class="grid-4" style="list-style:none; padding:0; margin:0;">
+
+    <!-- ══ ТОВАР (скопіюй цей <li> для нового товару) ══ -->
+    <li class="card">
+      <!-- Фото товару (заміни .placeholder на <img src="фото.jpg" alt="назва">) -->
+      <div class="placeholder" style="height:200px;">📷 Фото</div>
+      <div class="card-body">
+        <p class="badge badge-yellow" style="margin-bottom:.5rem;">Хіт</p>  <!-- ✏️ або видали -->
+        <h3 style="font-size:.95rem; margin-bottom:.35rem;">Назва товару</h3>  <!-- ✏️ -->
+        <p class="stars" style="margin-bottom:.5rem;">★★★★☆ (12)</p>  <!-- ✏️ -->
+        <p style="color:var(--сірий); font-size:.85rem; margin-bottom:.75rem;">Короткий опис товару.</p>  <!-- ✏️ -->
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <div>
+            <span class="price-old">300 грн</span>  <!-- ✏️ або видали цей рядок якщо немає знижки -->
+            <span class="price">240 грн</span>  <!-- ✏️ ціна -->
+          </div>
+          <button class="btn btn-red" style="font-size:.8rem; padding:.4rem .9rem;">Купити</button>
+        </div>
+      </div>
+    </li>
+    <!-- ══ кінець ТОВАРУ ══ -->
+
+    <!-- ══ ТОВАР 2 ══ -->
+    <li class="card">
+      <div class="placeholder" style="height:200px;">📷 Фото</div>
+      <div class="card-body">
+        <p class="badge badge-red" style="margin-bottom:.5rem;">Новинка</p>
+        <h3 style="font-size:.95rem; margin-bottom:.35rem;">Назва товару</h3>
+        <p class="stars" style="margin-bottom:.5rem;">★★★★★ (24)</p>
+        <p style="color:var(--сірий); font-size:.85rem; margin-bottom:.75rem;">Короткий опис товару.</p>
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <span class="price">175 грн</span>
+          <button class="btn btn-red" style="font-size:.8rem; padding:.4rem .9rem;">Купити</button>
+        </div>
+      </div>
+    </li>
+
+    <!-- ══ ТОВАР 3 ══ -->
+    <li class="card">
+      <div class="placeholder" style="height:200px;">📷 Фото</div>
+      <div class="card-body">
+        <p class="badge badge-gray" style="margin-bottom:.5rem;">Категорія 2</p>
+        <h3 style="font-size:.95rem; margin-bottom:.35rem;">Назва товару</h3>
+        <p class="stars" style="margin-bottom:.5rem;">★★★☆☆ (5)</p>
+        <p style="color:var(--сірий); font-size:.85rem; margin-bottom:.75rem;">Короткий опис товару.</p>
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <span class="price">390 грн</span>
+          <button class="btn btn-red" style="font-size:.8rem; padding:.4rem .9rem;">Купити</button>
+        </div>
+      </div>
+    </li>
+
+    <!-- ══ ТОВАР 4 ══ -->
+    <li class="card">
+      <div class="placeholder" style="height:200px;">📷 Фото</div>
+      <div class="card-body">
+        <p class="badge badge-yellow" style="margin-bottom:.5rem;">-15%</p>
+        <h3 style="font-size:.95rem; margin-bottom:.35rem;">Назва товару</h3>
+        <p class="stars" style="margin-bottom:.5rem;">★★★★★ (31)</p>
+        <p style="color:var(--сірий); font-size:.85rem; margin-bottom:.75rem;">Короткий опис товару.</p>
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <div>
+            <span class="price-old">470 грн</span>
+            <span class="price">400 грн</span>
+          </div>
+          <button class="btn btn-red" style="font-size:.8rem; padding:.4rem .9rem;">Купити</button>
+        </div>
+      </div>
+    </li>
+
+  </ul>
+</section>
+
+
+<!-- ╔══════════════════════════════════╗
+     ║  БЛОК 4: БАНЕР АКЦІЇ           ║
+     ║  ✏️ Змінити текст або видалити  ║
+     ╚══════════════════════════════════╝ -->
+<section style="background: var(--акцент); color:#fff; text-align:center; padding:3rem 2rem;">
+  <h2 style="color:#fff; font-size:1.4rem; margin-bottom:.5rem;">🎉 Знижка 10% на перше замовлення!</h2>  <!-- ✏️ -->
+  <p style="opacity:.85; margin-bottom:1.5rem;">Введи промокод <strong>ПЕРШЕ10</strong></p>  <!-- ✏️ -->
+  <a href="#" class="btn" style="background:#fff; color:var(--акцент); font-weight:700;">Скористатись знижкою</a>
+</section>
+
+
+<!-- ПІДВАЛ -->
+<footer>
+  <ul>
+    <li><a href="index.html">Головна</a></li>
+    <li><a href="shop.html">Магазин</a></li>
+    <li><a href="wiki.html">Вікі</a></li>
+    <li><a href="series.html">Серіал</a></li>
+  </ul>
+  <p>&copy; 2025 МоєЛого</p>
+</footer>
+
+
+<script>
+  /* Активна кнопка фільтру */
+  function filterActive(btn) {
+    document.querySelectorAll('button.btn').forEach(b => {
+      b.className = 'btn btn-border';
+    });
+    btn.className = 'btn btn-dark';
+  }
+</script>
+
+</body>
+</html>

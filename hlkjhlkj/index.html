@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мій сайт</title>  <!-- ✏️ Змінити назву вкладки -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<!-- ╔══════════════════════════════════╗
+     ║  БЛОК 1: НАВІГАЦІЯ              ║
+     ║  Є на кожній сторінці!          ║
+     ║  ✏️ Змінити: назву лого, пункти  ║
+     ╚══════════════════════════════════╝ -->
+<nav>
+  <a href="index.html" class="logo">Моє<span>Лого</span></a>  <!-- ✏️ назва -->
+  <ul>
+    <li><a href="index.html"  class="active">Головна</a></li>
+    <li><a href="shop.html">Магазин</a></li>
+    <li><a href="wiki.html">Вікі</a></li>
+    <li><a href="series.html">Серіал</a></li>
+  </ul>
+</nav>
+
+
+<!-- ╔══════════════════════════════════╗
+     ║  БЛОК 2: ГОЛОВНИЙ БАНЕР (hero)  ║
+     ║  ✏️ Змінити: заголовок, опис,   ║
+     ║     кнопки, колір фону           ║
+     ╚══════════════════════════════════╝ -->
+<section style="background: linear-gradient(135deg, #1a1a2e, #302b63); color:#fff; padding: 5rem 2rem; text-align: center;">
+
+  <p class="badge badge-red" style="margin-bottom:1rem;">Новинка 2025</p>  <!-- ✏️ або видали цей рядок -->
+
+  <h1 style="font-size: clamp(1.8rem, 5vw, 3.5rem); color:#fff; margin-bottom: 1rem;">
+    Ласкаво просимо<br>на <span style="color: var(--акцент);">мій сайт</span>  <!-- ✏️ заголовок -->
+  </h1>
+
+  <p style="opacity:.8; max-width:500px; margin: 0 auto 2rem;">
+    Напиши тут кілька речень про що цей сайт.  <!-- ✏️ опис -->
+  </p>
+
+  <a href="shop.html" class="btn btn-red">Перейти до магазину</a>  <!-- ✏️ кнопка 1 -->
+  &nbsp;
+  <a href="wiki.html" class="btn btn-border" style="color:#fff; border-color:rgba(255,255,255,.5);">Дізнатись більше</a>  <!-- ✏️ кнопка 2 -->
+
+</section>
+
+
+<!-- ╔══════════════════════════════════╗
+     ║  БЛОК 3: 3 КАРТКИ (переваги)   ║
+     ║  ✏️ Змінити: іконки, текст      ║
+     ║  ➕ Дублювати: скопіювати <li>  ║
+     ╚══════════════════════════════════╝ -->
+<section style="padding: 4rem 2rem;">
+
+  <h2 style="text-align:center; margin-bottom: 2rem; font-size:1.5rem;">Чому обрати нас?</h2>  <!-- ✏️ -->
+
+  <ul class="grid-3" style="list-style:none; padding:0; margin:0;">
+
+    <!-- ── Картка 1 (скопіюй цей <li> щоб додати нову) ── -->
+    <li class="card" style="text-align:center; padding:2rem 1.5rem;">
+      <p style="font-size:3rem; margin:0 0 .75rem;">🚀</p>  <!-- ✏️ іконка (емодзі) -->
+      <h3 style="font-size:1rem; margin-bottom:.5rem;">Перевага 1</h3>  <!-- ✏️ -->
+      <p style="color:var(--сірий); font-size:.9rem;">Напиши кілька слів про цю перевагу.</p>  <!-- ✏️ -->
+    </li>
+
+    <!-- ── Картка 2 ── -->
+    <li class="card" style="text-align:center; padding:2rem 1.5rem;">
+      <p style="font-size:3rem; margin:0 0 .75rem;">⚡</p>
+      <h3 style="font-size:1rem; margin-bottom:.5rem;">Перевага 2</h3>
+      <p style="color:var(--сірий); font-size:.9rem;">Напиши кілька слів про цю перевагу.</p>
+    </li>
+
+    <!-- ── Картка 3 ── -->
+    <li class="card" style="text-align:center; padding:2rem 1.5rem;">
+      <p style="font-size:3rem; margin:0 0 .75rem;">🎯</p>
+      <h3 style="font-size:1rem; margin-bottom:.5rem;">Перевага 3</h3>
+      <p style="color:var(--сірий); font-size:.9rem;">Напиши кілька слів про цю перевагу.</p>
+    </li>
+
+  </ul>
+</section>
+
+
+<!-- ╔══════════════════════════════════╗
+     ║  БЛОК 4: ТЕКСТ + ФОТО           ║
+     ║  ✏️ Змінити: текст, замінити    ║
+     ║     .placeholder на <img>       ║
+     ╚══════════════════════════════════╝ -->
+<section style="padding: 4rem 2rem; background: #fff;">
+  <div class="grid-2" style="max-width:960px; margin:0 auto; align-items:center;">
+
+    <!-- Фото (замінити на <img src="фото.jpg" alt="опис">) -->
+    <div class="placeholder" style="height:320px; border-radius:12px;">📷 Вставте фото</div>
+
+    <!-- Текст -->
+    <div>
+      <h2 style="font-size:1.4rem; margin-bottom:1rem;">Про проект</h2>  <!-- ✏️ -->
+      <p style="color:var(--сірий); margin-bottom:1rem;">Перший абзац. Розкажи про свій сайт, проект або тему.</p>  <!-- ✏️ -->
+      <p style="color:var(--сірий); margin-bottom:1.5rem;">Другий абзац. Можна додати ще один <p> якщо треба.</p>  <!-- ✏️ -->
+      <a href="wiki.html" class="btn btn-red">Читати більше</a>  <!-- ✏️ -->
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ╔══════════════════════════════════╗
+     ║  БЛОК 5: ПІДВАЛ                 ║
+     ║  ✏️ Змінити: посилання, рік     ║
+     ╚══════════════════════════════════╝ -->
+<footer>
+  <ul>
+    <li><a href="index.html">Головна</a></li>
+    <li><a href="shop.html">Магазин</a></li>
+    <li><a href="wiki.html">Вікі</a></li>
+    <li><a href="series.html">Серіал</a></li>
+  </ul>
+  <p>&copy; 2025 МоєЛого</p>  <!-- ✏️ рік та назва -->
+</footer>
+
+
+</body>
+</html>
