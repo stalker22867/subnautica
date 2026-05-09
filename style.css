@@ -1,42 +1,4 @@
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Загальні налаштування */
 body {
     background: radial-gradient(circle at center, #001f3f 0%, #00050a 100%);
@@ -89,7 +51,7 @@ nav {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1518467166778-b88f373ffec7?q=80&w=1600&auto=format&fit=crop');
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/store/software/switch2/70010000117828/21b53d7db20b98293ddb992264df1e60e61a67a99a4f08345114c986ecfef85a');
     background-size: cover;
     background-position: center;
 }
